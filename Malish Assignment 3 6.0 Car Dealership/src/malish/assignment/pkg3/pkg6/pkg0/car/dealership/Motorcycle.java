@@ -20,7 +20,7 @@ public class Motorcycle extends Vehicle
     public Motorcycle(String make, String model, Color color, double purchasePrice, double askingPrice)
     {
 
-              super(make, model, color, purchasePrice, askingPrice);
+              super(make, model, color, purchasePrice);
               
               motoCount++;
 
@@ -35,12 +35,7 @@ public class Motorcycle extends Vehicle
 
     
     //Override for Commission (Motorcycle)
-    @Override
-    public double commission()
-    {
-
-        return (this.getAskingPrice() * 0.20);
-  
-    }
+ 
+    
 }
 

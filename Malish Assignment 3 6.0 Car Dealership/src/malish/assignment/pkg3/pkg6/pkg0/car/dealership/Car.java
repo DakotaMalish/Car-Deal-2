@@ -20,23 +20,17 @@ public class Car extends Vehicle
 
  
     //construcor
-    public Car(String make, String model, Color color, double purchasePrice, double askingPrice)
+    public Car(String make, String model, Color color, double purchasePrice)
     {
 
-              super(make, model, color, purchasePrice, askingPrice);
+              super(make, model, color, purchasePrice);
       //incraments count
       carCount++;
              
     }
     
     //Override for Commission (car)
-    @Override
-    public double commission()
-    {
-
-        return (this.getAskingPrice() * 0.05);
-  
-    }
+    
     
     //gets and sets Passenger and door variables
     public void setPassengers(int passengers){this.passengers = passengers;}

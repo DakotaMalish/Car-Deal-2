@@ -16,14 +16,14 @@ public class Vehicle
     private String model;
     private Color color;
     private double purchasePrice;
-    private double askingPrice;
+
     private double customOffer;
     private static int vehicleCount;
     //private boolean customerOffer = false;
   
 
     //construcor
-    public Vehicle(String make, String model, Color color, double purchasePrice, double askingPrice)
+    public Vehicle(String make, String model, Color color, double purchasePrice)
     
     {
      vehicleCount++;
@@ -32,7 +32,7 @@ public class Vehicle
      this.make = make;
      this.color = color;
      this.purchasePrice = purchasePrice;
-     this.askingPrice = askingPrice;
+    
      
      
     }
@@ -49,17 +49,10 @@ public class Vehicle
     public double getPurchasePrice(){return this.purchasePrice;}
     public void setPurchasePrice(double purchasePrice){this.purchasePrice = purchasePrice;}
     
-    public double getAskingPrice(){return this.askingPrice;}
-    public void setAskingPrice(double askingPrice){this.askingPrice = askingPrice;}
     
         
     //checks the deal agains the cars for sell
-    public boolean dealCheck()
-    {
-    //returns a boolean
-
-    return this.askingPrice > this.purchasePrice ;
-    }
+    
 
 
     //Removes Vehicles from ArrayList

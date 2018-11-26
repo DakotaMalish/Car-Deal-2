@@ -25,7 +25,7 @@ public class Truck extends Vehicle
     public Truck(String make, String model, Color color, double purchasePrice, double askingPrice)
     {
 
-              super(make, model, color, purchasePrice, askingPrice);
+              super(make, model, color, purchasePrice);
 
         truckCount++;
     }
@@ -42,13 +42,7 @@ public class Truck extends Vehicle
     
 
     //Override for Commission (truck)
-    @Override
-    public double commission()
-    {
-
-        return (this.getAskingPrice() * 0.15);
   
-    }
 
 
 

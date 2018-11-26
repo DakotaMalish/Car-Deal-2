@@ -5,6 +5,7 @@
  */
 package malish.assignment.pkg3.pkg6.pkg0.car.dealership;
 
+import java.awt.Color;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -23,6 +24,15 @@ import javafx.scene.control.TextField;
  * @author RedPanda13
  */
 public class FXMLDocumentController implements Initializable {
+    private String make;
+    private String model;
+    private Color color;
+    private double purchasePrice;
+    ArrayList<Vehicle> vehicles = new ArrayList<>();
+    
+    
+    
+    
     
     private Label label;
     @FXML
@@ -99,9 +109,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private ComboBox<?> truckCapacityInput;
     @FXML
-    private ComboBox<?> carDoorsInput;
+    private ComboBox<String> carDoorsInput;
+    ObservableList<String> carListDoors = FXCollections.observableArrayList(
+            "1","2","3","4","5","6");
     @FXML
-    private ComboBox<?> carCapacityInput;
+    private ComboBox<String> carCapacityInput;
+        ObservableList<String> carListCapacity = FXCollections.observableArrayList(
+            "1","2","3","4","5","6","7");
     @FXML
     private ComboBox<?> motoDoorsInput;
     @FXML
@@ -120,6 +134,9 @@ public class FXMLDocumentController implements Initializable {
 //    public void comboChanged(URL url, ResourceBundle rb){
         carMakeInput.setItems(carListMake);
         carModelInput.setItems(carListModel);
+        carCapacityInput.setItems(carListCapacity);
+        carDoorsInput.setItems(carListDoors);
+        
     }
     
     public void comboChanged(ActionEvent event){
