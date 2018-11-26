@@ -127,13 +127,18 @@ public class FXMLDocumentController implements Initializable {
             
             makeDisplay.setText(carMakeInput.getValue());
             modelDisplay.setText(carModelInput.getValue());
+        });
+         
+        
+        carUpdateInput.setOnAction(e -> {
+        
+        Car[] carArray = new Car[10];
+        carArray[10] = new Car( make, model, color, purchasePrice);
             
         
+        });  
             
-            
-            
-            
-        });
+        
     }
 //**********************************************************************************************************************************
         
